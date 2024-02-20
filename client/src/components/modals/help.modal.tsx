@@ -46,7 +46,6 @@ const HelpModal = NiceModal.create(() => {
                   <p>
                     <strong>How to use?</strong>
                   </p>
-                  <p>Enter the color bands of the resistor and press the calculate button.</p>
                   <p>
                     From the left to the right, the first two bands represent the significant digits, the third band represents the multiplier, and
                     the fourth band represents the tolerance.

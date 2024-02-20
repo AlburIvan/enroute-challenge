@@ -1,7 +1,7 @@
 import NiceModal, { useModal } from '@ebay/nice-modal-react';
 import { Fragment, useCallback, useState } from 'react';
 import { Dialog, Switch, Transition } from '@headlessui/react';
-import { classNames } from './utils';
+import { classNames } from '../../utils/utils';
 
 const SettingsModal = NiceModal.create(() => {
   const modal = useModal();

@@ -35,8 +35,8 @@ To install the project and its dependencies, run the following commands:
 	- Run the database seeder with `npm run seed` to populate the database with the initial data.
 	- Run `npm run dev` to start the express development server.
 6. On the `client` directory:
-	- Run `npm run dev` to start the vite development server.
-  - Open your browser and navigate to `localhost:{PORT}` to view the project.
+  - Run `npm run dev` to start the vite development server.
+	- Open your browser and navigate to `localhost:{PORT}` to view the project.
 
 ### Useful Links
 

@@ -4,8 +4,8 @@ import logo from '../assets/logo.svg';
 import { FiSettings, FiHelpCircle } from 'react-icons/fi';
 import IconButton from './icon-button';
 import { useModal } from '@ebay/nice-modal-react';
-import SettingsModal from '../utils/settings.modal';
-import HelpModal from '../utils/help.modal';
+import SettingsModal from './modals/settings.modal';
+import HelpModal from './modals/help.modal';
 
 const Header: React.FC = () => {
   const settingsModal = useModal(SettingsModal);
