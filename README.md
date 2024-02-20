@@ -25,13 +25,18 @@ This project is a web-based eletronic color code calculator. It is designed to h
 
 To install the project and its dependencies, run the following commands:
 
-1. Clone this repository `git clone <repo-url>`.
-2. Run `npm install` in the root directory of the repository.
+1. Clone this repository `git clone <repo-url>` and navigate to it `mv <repo-name>`.
+2. Run `npm install` in the root directory of **each** project.
 3. Make sure you have a MySQL server running on your machine.
-4. Copy `.env.example`, rename, and configure the `.env` file with the appropiate values.
-5. Run the database seeder with `npm run seed` to populate the database with the initial data.
-6. Run `npm run dev` to start the development server.
-4. Open your browser and navigate to `localhost:{PORT}` to view the project.
+4. Duplicate and rename each `.env.example` files on each directory (`client` & `server`).
+  - Configure the `.env` file with the appropiate values, when needed.
+5. On the `server` directory:
+  - Run the database migrations with `npm run migrate` to create the database tables.
+	- Run the database seeder with `npm run seed` to populate the database with the initial data.
+	- Run `npm run dev` to start the express development server.
+6. On the `client` directory:
+	- Run `npm run dev` to start the vite development server.
+  - Open your browser and navigate to `localhost:{PORT}` to view the project.
 
 ### Useful Links
 
