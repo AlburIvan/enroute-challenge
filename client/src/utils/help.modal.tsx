@@ -33,8 +33,8 @@ const HelpModal = NiceModal.create(() => {
               leave='ease-in duration-200'
               leaveFrom='opacity-100 scale-100'
               leaveTo='opacity-0 scale-95'>
-              <Dialog.Panel className='w-full max-w-md p-6 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl'>
-                <Dialog.Title as='h3' className='text-lg font-medium leading-6 text-gray-900'>
+              <Dialog.Panel className='w-full max-w-md p-6 overflow-hidden text-left text-gray-900 align-middle transition-all transform bg-white shadow-xl dark:bg-slate-700 dark:text-white rounded-2xl'>
+                <Dialog.Title as='h3' className='text-lg font-medium leading-6'>
                   Settings
                 </Dialog.Title>
                 <div className='mt-6 space-y-4'>
