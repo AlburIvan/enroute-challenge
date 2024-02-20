@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
-import { bandCodes, multiplierCodes, toleranceCodes } from '../utils/codes';
+import { firstBandCodes, multiplierCodes, secondBandCodes, toleranceCodes } from '../utils/codes';
 import Bands from './bands';
-import { classNames, getServiceUrl } from '../utils/utils';
+import { classNames, formatResistance, getServiceUrl } from '../utils/utils';
 
 import { ResistorGraph } from './resistor-graph';
 
@@ -19,15 +19,12 @@ function Body() {
 
     setError(false);
 
-    const form = new FormData(ref.current);
-
-    form.forEach((value, key) => {
-      console.log({ key, value });
-    });
-
     const res = await fetch(`${getServiceUrl()}/api/calculate`, {
       method: 'POST',
-      body: form,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(Object.fromEntries(new FormData(ref.current))),
     });
 
     if (!res.ok) {
@@ -42,9 +39,10 @@ function Body() {
       return;
     }
 
-    console.log({ resJson });
-
-    setOutput(resJson.data);
+    const jsonOutput = `${formatResistance(resJson.data.resistance)} ±${resJson.data.tolerance}% (${formatResistance(
+      resJson.data.minResistance
+    )} - ${formatResistance(resJson.data.maxResistance)})`;
+    setOutput(jsonOutput);
   };
 
   return (
@@ -53,11 +51,11 @@ function Body() {
         <h1 className='text-3xl font-semibold text-center'>Resistor Color Code Calculator</h1>
         <h2 className='text-center'>Calculate the resistance of a 4-band resistor</h2>
 
-        <div className='flex flex-col items-center justify-center gap-4 md:flex-row md:space-y-0'>
+        <div className='flex flex-col items-center justify-center gap-4 md:space-y-0'>
           <ResistorGraph />
           <input
             type='text'
-            className='self-center w-1/3 px-6 py-4 text-center rounded-lg bg-slate-200 dark:bg-slate-700'
+            className='self-center w-2/3 px-6 py-4 font-medium text-center rounded-lg text-md bg-slate-200 dark:bg-slate-700'
             placeholder='Resistor value'
             value={output}
             readOnly
@@ -65,8 +63,8 @@ function Body() {
         </div>
 
         <div className='space-y-6'>
-          <Bands title='Band 1' bandPosition={1} colors={[...bandCodes]} />
-          <Bands title='Band 2' bandPosition={2} colors={[...bandCodes]} />
+          <Bands title='Band 1' bandPosition={1} colors={[...firstBandCodes]} />
+          <Bands title='Band 2' bandPosition={2} colors={[...secondBandCodes]} />
           <Bands title='Multiplier' bandPosition={3} colors={[...multiplierCodes]} />
           <Bands title='Tolerance' bandPosition={4} colors={[...toleranceCodes]} />
         </div>
@@ -81,11 +79,12 @@ function Body() {
             value='Calculate'
             onClick={onFormSubmit}
           />
-          <button
+          <input
             type='reset'
-            className='py-2.5 px-28 text-sm font-semibold transition-all duration-200 rounded-xl bg-slate-200 hover:bg-slate-300 text-black select-none'>
-            Reset
-          </button>
+            value='Reset'
+            onClick={() => setOutput('')}
+            className='py-2.5 px-28 text-sm font-semibold transition-all duration-200 rounded-xl bg-slate-200 hover:bg-slate-300 text-black select-none'
+          />
         </div>
       </form>
     </div>
