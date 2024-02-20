@@ -28,6 +28,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
+            ["@prisma/client", "virtual:48fd9d653646a991d0eda5ffe92778b72de446c151643ca5c3964e62f24bed64d28e19b09ae1edf82cd4ab484e9e16d2c4b4953045a3524fb9431546d36f4563#npm:5.9.1"],\
+            ["@types/cors", "npm:2.8.17"],\
+            ["@types/express", "npm:4.17.21"],\
             ["@types/node", "npm:20.11.19"],\
             ["body-parser", "npm:1.20.2"],\
             ["cors", "npm:2.8.5"],\
@@ -76,6 +79,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@jridgewell/trace-mapping", "npm:0.3.9"],\
             ["@jridgewell/resolve-uri", "npm:3.1.2"],\
             ["@jridgewell/sourcemap-codec", "npm:1.4.15"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@prisma/client", [\
+        ["npm:5.9.1", {\
+          "packageLocation": "./.yarn/unplugged/@prisma-client-virtual-d6cd59d6bc/node_modules/@prisma/client/",\
+          "packageDependencies": [\
+            ["@prisma/client", "npm:5.9.1"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:48fd9d653646a991d0eda5ffe92778b72de446c151643ca5c3964e62f24bed64d28e19b09ae1edf82cd4ab484e9e16d2c4b4953045a3524fb9431546d36f4563#npm:5.9.1", {\
+          "packageLocation": "./.yarn/unplugged/@prisma-client-virtual-d6cd59d6bc/node_modules/@prisma/client/",\
+          "packageDependencies": [\
+            ["@prisma/client", "virtual:48fd9d653646a991d0eda5ffe92778b72de446c151643ca5c3964e62f24bed64d28e19b09ae1edf82cd4ab484e9e16d2c4b4953045a3524fb9431546d36f4563#npm:5.9.1"],\
+            ["@types/prisma", null],\
+            ["prisma", "npm:5.9.1"]\
+          ],\
+          "packagePeers": [\
+            "@types/prisma",\
+            "prisma"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -169,12 +194,128 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@types/body-parser", [\
+        ["npm:1.19.5", {\
+          "packageLocation": "./.yarn/cache/@types-body-parser-npm-1.19.5-97fb106976-1e251118c4.zip/node_modules/@types/body-parser/",\
+          "packageDependencies": [\
+            ["@types/body-parser", "npm:1.19.5"],\
+            ["@types/connect", "npm:3.4.38"],\
+            ["@types/node", "npm:20.11.19"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/connect", [\
+        ["npm:3.4.38", {\
+          "packageLocation": "./.yarn/cache/@types-connect-npm-3.4.38-a8a4c38337-7eb1bc5342.zip/node_modules/@types/connect/",\
+          "packageDependencies": [\
+            ["@types/connect", "npm:3.4.38"],\
+            ["@types/node", "npm:20.11.19"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/cors", [\
+        ["npm:2.8.17", {\
+          "packageLocation": "./.yarn/cache/@types-cors-npm-2.8.17-2556d16051-469bd85e29.zip/node_modules/@types/cors/",\
+          "packageDependencies": [\
+            ["@types/cors", "npm:2.8.17"],\
+            ["@types/node", "npm:20.11.19"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/express", [\
+        ["npm:4.17.21", {\
+          "packageLocation": "./.yarn/cache/@types-express-npm-4.17.21-be92a0245e-fb23829863.zip/node_modules/@types/express/",\
+          "packageDependencies": [\
+            ["@types/express", "npm:4.17.21"],\
+            ["@types/body-parser", "npm:1.19.5"],\
+            ["@types/express-serve-static-core", "npm:4.17.43"],\
+            ["@types/qs", "npm:6.9.11"],\
+            ["@types/serve-static", "npm:1.15.5"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/express-serve-static-core", [\
+        ["npm:4.17.43", {\
+          "packageLocation": "./.yarn/cache/@types-express-serve-static-core-npm-4.17.43-9cbdf8ef01-08e940cae5.zip/node_modules/@types/express-serve-static-core/",\
+          "packageDependencies": [\
+            ["@types/express-serve-static-core", "npm:4.17.43"],\
+            ["@types/node", "npm:20.11.19"],\
+            ["@types/qs", "npm:6.9.11"],\
+            ["@types/range-parser", "npm:1.2.7"],\
+            ["@types/send", "npm:0.17.4"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/http-errors", [\
+        ["npm:2.0.4", {\
+          "packageLocation": "./.yarn/cache/@types-http-errors-npm-2.0.4-8b39ca5d7c-1f3d7c3b32.zip/node_modules/@types/http-errors/",\
+          "packageDependencies": [\
+            ["@types/http-errors", "npm:2.0.4"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/mime", [\
+        ["npm:1.3.5", {\
+          "packageLocation": "./.yarn/cache/@types-mime-npm-1.3.5-48d28990db-e29a5f9c47.zip/node_modules/@types/mime/",\
+          "packageDependencies": [\
+            ["@types/mime", "npm:1.3.5"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@types/node", [\
         ["npm:20.11.19", {\
           "packageLocation": "./.yarn/cache/@types-node-npm-20.11.19-5d4958999b-259d16643b.zip/node_modules/@types/node/",\
           "packageDependencies": [\
             ["@types/node", "npm:20.11.19"],\
             ["undici-types", "npm:5.26.5"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/qs", [\
+        ["npm:6.9.11", {\
+          "packageLocation": "./.yarn/cache/@types-qs-npm-6.9.11-e12802ac61-620ca1628b.zip/node_modules/@types/qs/",\
+          "packageDependencies": [\
+            ["@types/qs", "npm:6.9.11"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/range-parser", [\
+        ["npm:1.2.7", {\
+          "packageLocation": "./.yarn/cache/@types-range-parser-npm-1.2.7-a83c0b6429-95640233b6.zip/node_modules/@types/range-parser/",\
+          "packageDependencies": [\
+            ["@types/range-parser", "npm:1.2.7"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/send", [\
+        ["npm:0.17.4", {\
+          "packageLocation": "./.yarn/cache/@types-send-npm-0.17.4-9d7c55577f-cf4db48251.zip/node_modules/@types/send/",\
+          "packageDependencies": [\
+            ["@types/send", "npm:0.17.4"],\
+            ["@types/mime", "npm:1.3.5"],\
+            ["@types/node", "npm:20.11.19"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/serve-static", [\
+        ["npm:1.15.5", {\
+          "packageLocation": "./.yarn/cache/@types-serve-static-npm-1.15.5-b911ffc092-0ff4b3703c.zip/node_modules/@types/serve-static/",\
+          "packageDependencies": [\
+            ["@types/serve-static", "npm:1.15.5"],\
+            ["@types/http-errors", "npm:2.0.4"],\
+            ["@types/mime", "npm:1.3.5"],\
+            ["@types/node", "npm:20.11.19"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -925,6 +1066,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["server", "workspace:."],\
+            ["@prisma/client", "virtual:48fd9d653646a991d0eda5ffe92778b72de446c151643ca5c3964e62f24bed64d28e19b09ae1edf82cd4ab484e9e16d2c4b4953045a3524fb9431546d36f4563#npm:5.9.1"],\
+            ["@types/cors", "npm:2.8.17"],\
+            ["@types/express", "npm:4.17.21"],\
             ["@types/node", "npm:20.11.19"],\
             ["body-parser", "npm:1.20.2"],\
             ["cors", "npm:2.8.5"],\
