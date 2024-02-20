@@ -15,7 +15,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: 'http://localhost:5173',
+    origin: `http://localhost:${process.env.FRONTEND_PORT}`,
     optionsSuccessStatus: 200,
   })
 );
@@ -35,10 +35,8 @@ app.use((err: Error, req: express.Request, res: express.Response, next: express.
 });
 
 app.post('/api/calculate', async (req, res) => {
-  // body of the request
   const body = req.body;
 
-  // Validate the body
   if (!body) {
     res.json({
       status: 'error',
@@ -73,8 +71,6 @@ app.post('/api/calculate', async (req, res) => {
   // Calculate the resistance
   const resistance = calculateResistance([band1, band2, multiplier, toleranceValue]);
   const [minResistance, maxResistance] = calculateToleranceRange(resistance, toleranceValue?.tolerance ?? 0);
-
-  // const result = resistance + 'Ω ' + toleranceValue + '%';
 
   const output = {
     resistance: resistance,
