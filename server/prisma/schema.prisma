@@ -9,3 +9,13 @@ datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
 }
+
+model Code {
+  id         Int      @id @default(autoincrement())
+  name       String
+  code       String
+  multiplier Float
+  tolerance  Float
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
