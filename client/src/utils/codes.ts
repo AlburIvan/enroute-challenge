@@ -15,8 +15,10 @@ export const colorCodes: Band[] = [
   { name: 'Silver', bgColor: 'bg-slate-300' },
 ];
 
-export const bandCodes: Band[] = [...colorCodes.filter((band) => band.name !== 'Gold' && band.name !== 'Silver')];
+export const firstBandCodes: Band[] = [...colorCodes.filter((band) => !['Black', 'Gold', 'Silver'].includes(band.name))];
+
+export const secondBandCodes: Band[] = [...colorCodes.filter((band) => !['Gold', 'Silver'].includes(band.name))];
 
 export const multiplierCodes: Band[] = [...colorCodes];
 
-export const toleranceCodes: Band[] = [...colorCodes.filter((band) => !['Black', 'Orange', 'Yellow', 'White'].includes(band.name))];
+export const toleranceCodes: Band[] = [...colorCodes.filter((band) => !['Black', 'White'].includes(band.name))];

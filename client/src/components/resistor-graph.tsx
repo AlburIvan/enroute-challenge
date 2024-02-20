@@ -53,12 +53,12 @@ export const ResistorGraph = () => {
 
       {/* Band 2 */}
       <div className='absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-[60px]'>
-        <div className={`w-4 h-[40px] ${band2Color}`}></div>
+        <div className={`w-4 h-[37px] ${band2Color}`}></div>
       </div>
 
       {/* Multiplier */}
       <div className='absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-[95px]'>
-        <div className={`w-4 h-[40px] ${multiplierColor}`}></div>
+        <div className={`w-4 h-[37px] ${multiplierColor}`}></div>
       </div>
 
       {/* Tolerance */}
