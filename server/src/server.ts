@@ -62,7 +62,7 @@ app.post('/api/calculate', async (req, res) => {
   });
 
   if (!band1 || !band2 || !multiplier || !toleranceValue) {
-    res.json({
+    return res.json({
       status: 'error',
       message: 'Invalid band value',
     });
@@ -78,8 +78,6 @@ app.post('/api/calculate', async (req, res) => {
     minResistance,
     maxResistance,
   };
-
-  console.log(output);
 
   res.json({ status: 'success', data: output });
 });

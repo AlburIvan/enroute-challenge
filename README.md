@@ -32,11 +32,19 @@ To install the project and its dependencies, run the following commands:
   - Configure the `.env` file with the appropiate values, when needed.
 5. On the `server` directory:
   - Run the database migrations with `npm run migrate` to create the database tables.
-	- Run the database seeder with `npm run seed` to populate the database with the initial data.
+	  - If the seeder didn't run automatically, run it manually with `npm run seed` to populate the database with the initial data.
 	- Run `npm run dev` to start the express development server.
 6. On the `client` directory:
   - Run `npm run dev` to start the vite development server.
 	- Open your browser and navigate to `localhost:{PORT}` to view the project.
+
+
+### Improvements
+
+- Fix graphical issue on reset with the resistor image
+- Add more tests to the client and server
+- Optimize query performance on the server
+
 
 ### Useful Links
 
