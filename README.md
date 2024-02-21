@@ -39,11 +39,11 @@ To install the project and its dependencies, run the following commands:
 	- Open your browser and navigate to `localhost:{PORT}` to view the project.
 
 
-### Improvements
+### TODO Improvements
 
-- Fix graphical issue on reset with the resistor image
-- Add more tests to the client and server
-- Optimize query performance on the server
+- [ ] Fix graphical issue on reset with the resistor image
+- [ ] Add more tests to the client and server, (UI components, API endpoints, integration tests)
+- [ ] Optimize query performance on the server
 
 
 ### Useful Links
